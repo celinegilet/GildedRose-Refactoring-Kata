@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -180,12 +180,12 @@ public class GildedRoseTest {
     private GildedRose buildApp(Item item) {
         return new GildedRose(new Item[] {item});
     }
-    
+
     private void verifyItem(GildedRose app, String name, int sellIn, int quality) {
         Item item = app.items[0];
         assertThat(item.name).isEqualTo(name);
         assertThat(item.sellIn).isEqualTo(sellIn);
         assertThat(item.quality).isEqualTo(quality);
     }
-    
+
 }
